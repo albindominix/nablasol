@@ -72,7 +72,7 @@ function FormStep4({ register, errors, watch, setValue,setTasks,tasks }) {
           <span className="text-red-600 m-3">Max length exceeded</span>
         )}
       </label>
-      <div className="flex flex-col  max-h-[20rem] overflow-y-scroll">
+      <div className="flex flex-col  max-h-[18rem] overflow-y-scroll">
         {tasks?.map((item, index) => (
           <div
             key={item.id}

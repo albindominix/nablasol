@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import FormStep1 from "./FormStep1";
 import FormStep2 from "./FormStep2";
 import FormStep3 from "./FormStep3";
+import arrow from '../assets/arrow.svg'
 import { useSnackbar } from "notistack";
 
 import FormStep4 from "./FormStep4";
@@ -86,7 +87,7 @@ console.log(formStepValue)
             <div className="relative max-w-2xl my-6 mx-auto md:w-[30rem]">
               <form onSubmit={handleSubmit(onSubmit)}>
                 {/*content*/}
-                <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none min-h-[95vh]">
+                <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none min-h-[85vh]">
                   {/*header*/}
                   <div className="flex relative items-start w-full  justify-center p-5 border-slate-200 rounded-t">
                     {headings.map((item, index) => (
@@ -157,7 +158,7 @@ console.log(formStepValue)
                     <div className="absolute left-3">
                       {formStepValue == 1 ? (
                         <button
-                          className="text-red-600-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                          className="text-red-600-500 background-transparent font-normal  px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                           type="button"
                           onClick={() => {
                             setShowModal(false);
@@ -167,8 +168,10 @@ console.log(formStepValue)
                           Close
                         </button>
                       ) : (
+                        <div className=" flex items-center ">
+                          <img className="w-5" src={arrow} alt="" />
                         <button
-                          className="text-red-600-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                          className="text-red-600-500 background-transparent font-normal  px-6 py-2 pl-0 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                           type="button"
                           onClick={() => {
                             {
@@ -177,16 +180,17 @@ console.log(formStepValue)
                             }
                           }}
                         >
-                          Prev
+                          Back
                         </button>
+                        </div>
                       )}
                     </div>
                     <div className="">
                       {formStepValue == 4 ? (
                         <button
                           className={`${
-                            !isValid ? "bg-emerald-100" : "bg-emerald-500"
-                          }  bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150`}
+                            !isValid ? "bg-blue-100" : "bg-blue-500"
+                          }  bg-blue-500 text-white active:bg-blue-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150`}
                           type="submit"
                           disabled={isSubmitting}
                         >
@@ -195,8 +199,8 @@ console.log(formStepValue)
                       ) : (
                         <button
                           className={`${
-                            !isValid ? "bg-emerald-100" : "bg-emerald-500"
-                          }  text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 `}
+                            !isValid ? "bg-blue-100" : "bg-blue-500"
+                          }  text-white active:bg-blue-500 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 `}
                           type="button"
                           disabled={!isValid}
                           onClick={(e) => {
