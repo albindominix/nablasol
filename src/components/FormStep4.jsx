@@ -13,7 +13,6 @@ function FormStep4({ register, errors, watch, setValue,setTasks,tasks }) {
 
   function addTask() {
     setNextId((prev) => prev + 1);
-    console.log(nextId);
     if (!text) {
       return;
     }
@@ -39,7 +38,6 @@ function FormStep4({ register, errors, watch, setValue,setTasks,tasks }) {
 
   }
   console.log(watch("tasks"));
-  console.log(tasks);
   return (
     <div>
       {" "}
@@ -90,7 +88,7 @@ function FormStep4({ register, errors, watch, setValue,setTasks,tasks }) {
             <button
               type="button"
               onClick={() => deleteTask(item.id)}
-              className="outline-none p-2 py-1 text-xs rounded-md bg-blue-200 font-semibold"
+              className={`outline-none p-2 py-1 text-xs rounded-md  font-semibold ${item.checked?'bg-teal-100':''}`}
             >
               X
             </button>

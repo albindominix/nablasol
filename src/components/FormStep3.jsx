@@ -17,7 +17,7 @@ function FormStep3({ register, errors, watch, setValue }) {
 console.log(watch("manage-project"))
 
   return (
-    <form>
+    <div>
       <div className=" min-h-[320px] w-64 md:w-full">
         <div className="flex flex-col gap-6">
           <div
@@ -73,7 +73,7 @@ console.log(watch("manage-project"))
           </div>
         </div>
       </div>
-    </form>
+    </div>
   );
 }
 

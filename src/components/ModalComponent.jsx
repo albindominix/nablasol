@@ -41,7 +41,6 @@ export default function ModalComponent() {
   const [formStepValue, setFormStepValue] = useState(1);
   const [tasks, setTasks] = useState(initTask);
   const { enqueueSnackbar } = useSnackbar();
-console.log(formStepValue)
   const {
     register,
     handleSubmit,
@@ -68,6 +67,8 @@ console.log(formStepValue)
     );
   };
 
+  console.log(watch('startTime'))
+  console.log(watch('endTime'))
 
   return (
     <>

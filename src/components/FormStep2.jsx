@@ -15,7 +15,7 @@ function FormStep3({ register, errors, watch, setValue }) {
   }
   console.log(watch("view"));
   return (
-    <form>
+    <div>
       <div className=" min-h-[320px]">
         <div className="flex gap-10">
         <div className="flex flex-1 ">
@@ -49,7 +49,7 @@ function FormStep3({ register, errors, watch, setValue }) {
         <p>Board</p>
        </div>
       </div>
-    </form>
+    </div>
   );
 }
 

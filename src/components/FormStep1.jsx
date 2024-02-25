@@ -1,6 +1,7 @@
 import React from "react";
 import plus from "../assets/plus.svg";
 function FormStep1({ register, errors,getValues }) {
+
   return (
     <div>
       {" "}
@@ -87,7 +88,9 @@ function FormStep1({ register, errors,getValues }) {
           className="block w-full mt-3 p-2 border  border-gray-300 rounded-md  text-sm  focus:border-indigo-300 focus:ring focus:ring-indigo-200 outline-none placeholder:text-sm"
           id="startTime"
           name="startTime"
-          {...register("startTime", {})}
+          {...register("startTime", {
+            required:true
+          })}
         />
         {errors.startTime && errors.startTime.type === "required" && (
           <span className="text-red-600 m-3">This is required</span>
